@@ -1,0 +1,110 @@
+:root {
+  --bg-color: #ff7300;
+}
+
+.cardContainer {
+  width: 325px;
+  height: 475px;
+  background-color: rgb(48, 48, 48);
+  background-image: linear-gradient( rgb(19, 19, 19) 0%, rgb(65, 64, 64) 100%);
+  border: 2px solid var(--bg-color);
+  border-radius: 8px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.profileSection {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-bottom: 2px dashed var(--bg-color);
+}
+
+.profileImageContainer {
+  width: 125px;
+  height: 125px;
+  background-color: var(--bg-color);
+  background-image: linear-gradient(rgb(247, 134, 29) 0%, rgb(187, 87, 6) 100%);
+  border-radius: 50%;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  padding: 2px;
+}
+
+.profileImage {
+  width: 100%;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+  backface-visibility: hidden;
+}
+.profileName {
+  color: var(--bg-color);
+  font-size: 1em;
+  letter-spacing: 3px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+}
+
+.profileNick {
+  font-size: 15px;
+  margin-top: -15px;
+}
+
+.gameSection {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gameHeader {
+  margin-bottom: 12px;
+}
+
+.gamesContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.game {
+  width: 90px;
+  height: 120px;
+  border: 1px solid var(--bg-color);
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.gameImage {
+  width: 100%;
+}
+
+.F {
+  border-color: rgb(255, 0, 149);
+  & .profileSection {
+    border-color: rgb(255, 0, 149);
+  }
+  & .profileImageContainer {
+    background-image: linear-gradient(
+      rgb(255, 110, 134) 0%,
+      rgb(255, 37, 164) 100%
+    );
+  }
+  & .profileName {
+    color: rgb(255, 0, 149);
+  }
+  & .game {
+    border-color: rgb(255, 0, 149);
+  }
+}

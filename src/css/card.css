@@ -1,0 +1,115 @@
+:root {
+  --main-component-color: #1a1d23;
+  --heading-color: #39ff14;
+  --letter-color: #39ff14;
+  --border-color: #ff4d00;
+}
+
+.main-component {
+  width: 300px;
+  height: 475px;
+  border: 1px solid var(--border-color);
+  box-shadow: 5px 5px 8px #c5653c52;
+  background-color: var(--main-component-color);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: .5s ease-in-out;
+}
+.main-component:hover {
+  transform: scale(1.05);
+}
+
+.main-section {
+  width: 290px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.card-image {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  border: 3px solid var(--border-color);
+ 
+  transition: .5s ease-in-out;
+}
+.card-image:hover {
+  transform: rotateY(180deg) scale(1.05);
+}
+
+.card-name {
+  font-size: 32px;
+  color: var(--border-color);
+  letter-spacing: 3px;
+}
+
+.card-line {
+  border: 1px dashed var(--border-color);
+  width: 95%;
+}
+
+.game-component {
+  width: 300px;
+  height: 200px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.game-name {
+  color: var(--border-color);
+}
+
+.game-list {
+  width: 285px;
+  height: 160px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.game-content {
+  width: 85px;
+  height: 115px;
+  border: 2px solid var(--border-color);
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+}
+.game-content img {
+  width: 85px;
+  border-radius: 5px 5px 0 0;
+}
+
+.M {
+  border-color: #ff4d00;
+}
+
+.F {
+  border-color: rgb(235, 48, 225);
+  & .card-image {
+    border-color: rgb(223, 80, 223);
+  }
+  & .card-line {
+    border-color: rgb(235, 48, 225);
+  }
+  & .card-name {
+    color: rgb(223, 80, 223);
+  }
+  & .game-content {
+    border-color: rgb(223, 80, 223);
+  }
+  & .game-name {
+    color: rgb(223, 80, 223);
+  }
+}
